@@ -78,6 +78,7 @@
 	align-items: center;
 	align-content: center;
 	justify-content: center;
+	padding-left: 13px !important;
 
 	&-item {
 
@@ -86,6 +87,10 @@
 			padding: 15px;
 			cursor: pointer;
 			color: #fff;
+
+			@media only screen and (max-width: 500px) {
+				padding: 15px 7px;
+			}
 		}
 	}
 }
@@ -116,10 +121,18 @@
 
 .page-prev {
 	margin-right: 10px;
+
+	@media only screen and (max-width: 767px) {
+		display: none;
+	}
 }
 
 .page-next {
 	margin-left: 10px;
+
+	@media only screen and (max-width: 767px) {
+		display: none;
+	}
 }
 
 .toolbox {
