@@ -7,9 +7,9 @@ import qs from "qs";
 
 import { TMDB_API_KEY } from "../../../config.js";
 
-import "./MovieDetail.scss";
+import "./TvDetail.scss";
 
-class MovieDetail extends Component {
+class TvDetail extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -281,4 +281,4 @@ class MovieDetail extends Component {
     }
 }
 
-export default withRouter(MovieDetail);
+export default withRouter(TvDetail);

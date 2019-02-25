@@ -5,7 +5,7 @@ import ReactPaginate from 'react-paginate';
 import { TMDB_API_KEY } from "../../config.js";
 
 import "../../styles.scss";
-import MovieList from "../movie-list/MovieList.jsx";
+import TvList from "../tv-list/TvList.jsx";
 
 import "./Home.scss";
 
@@ -14,7 +14,7 @@ class Home extends Component {
 		super(props);
 		this.state = {
 			isLoading: true,
-			movies: null,
+			tvshows: null,
 
 			totalMovies: null,
 			pageNumber: 1,
@@ -44,11 +44,11 @@ class Home extends Component {
     async getMovies() {
     	const { pageNumber, sortBy, selectedGenre } = this.state;
 
-    	const movies = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${TMDB_API_KEY}&language=en-US&with_genres=${selectedGenre}&sort_by=${sortBy}&page=${pageNumber}`)
+    	const tvshows = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${TMDB_API_KEY}&language=en-US&with_genres=${selectedGenre}&sort_by=${sortBy}&page=${pageNumber}`)
 
         this.setState({
             isLoading: false,
-            movies: movies.data,
+            tvshows: tvshows.data,
             totalMovies: 500
         });
 	}
@@ -83,7 +83,7 @@ class Home extends Component {
 
     	this.setState({
             isLoading: false,
-            movies: (searchQuery !== "") && searchTv.data,
+            tvshows: (searchQuery !== "") && searchTv.data,
             totalMovies: (searchQuery !== "") && searchTv.data.total_pages,
             pageNumber: 1
         });
@@ -170,7 +170,7 @@ class Home extends Component {
 
 	render() {
 
-		const { movies, searchQuery, totalMovies, sortBy, genres, selectedGenre } = this.state;
+		const { tvshows, searchQuery, totalMovies, sortBy, genres, selectedGenre } = this.state;
 
 		return (
 			<div className="home">
@@ -224,17 +224,17 @@ class Home extends Component {
 								<p>Explore the next TV series to binge-watch!</p>
 							</div>
 						
-							<MovieList movies={movies}/>	
+							<TvList tvshows={tvshows}/>	
 						</div>
 					</div>
 				</div>
 
 				<div className="container">
 
-					{movies && 
+					{tvshows && 
 						<div className="row">
 							<div className="col">
-								{movies.length !== 0 &&
+								{tvshows.length !== 0 &&
 							        <ReactPaginate
 							          previousLabel={'previous'}
 							          nextLabel={'next'}

@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
-import "./MovieList.scss";
+import "./TvList.scss";
 
-class MovieList extends Component {
+class TvList extends Component {
     constructor(props) {
         super(props);
         this.state = {};
-
     }
 
     /**
-     * gets the movie seasons from the API endpoint
-     * @param {string} query		search query string
+     * handles redirection when a tv show is clicked
+     * @param {string} movieId		movie id
      */
     handleItemClick(movieId) {
     	const { history } = this.props;
 
     	history.push({
-		  pathname: '/movie-detail',
+		  pathname: '/tv-detail',
 		  search: `?query=${movieId}`
 		})
 
@@ -25,14 +24,14 @@ class MovieList extends Component {
 
     render() {
 
-    	const { movies } = this.props;
+    	const { tvshows } = this.props;
 
-        if(movies) {
+        if(tvshows) {
             return (
                 <div className="movie-list">
                     <div className="container">
                         <div className="row">
-                            {movies.results.map(movie => {
+                            {tvshows.results.map(movie => {
 
                                 let isFavourite = false;
 
@@ -65,4 +64,4 @@ class MovieList extends Component {
     }
 }
 
-export default withRouter(MovieList);
+export default withRouter(TvList);
