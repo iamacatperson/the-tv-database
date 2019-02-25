@@ -1,8 +1,10 @@
-# HOOQ TV Shows Database
+# TV Shows Database
 
 A simple TV show database!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+TV show data is served from [The Movie Database](https://www.themoviedb.org/).
 
 ## Installation
 
@@ -15,14 +17,15 @@ hit enter. This will copy all the files from this repo down to your computer.
 
 * In your terminal, cd into the directory you just created
 
- ```cd hooq```
+ ```cd your directory```
 
 * Type ```npm install``` to install all dependencies
 
 ## Functionality overview
 
-* Ability to browse TV shows and see their details
-* Search TV shows
+* Browse TV shows
+* See TV show details
+* Search / Sort TV shows
 * Favourite TV shows
 
 ## License
