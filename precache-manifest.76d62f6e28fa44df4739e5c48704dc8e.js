@@ -12,15 +12,15 @@ self.__precacheManifest = [
     "url": "/the-tv-database/static/js/runtime~main.9b3fe2d5.js"
   },
   {
-    "revision": "ae421ebc27dc236686d6",
-    "url": "/the-tv-database/static/js/main.ae421ebc.chunk.js"
+    "revision": "08ed08e966c5dcbf1f6a",
+    "url": "/the-tv-database/static/js/main.08ed08e9.chunk.js"
   },
   {
     "revision": "fed534b60cfbd0842d9c",
     "url": "/the-tv-database/static/js/2.fed534b6.chunk.js"
   },
   {
-    "revision": "ae421ebc27dc236686d6",
+    "revision": "08ed08e966c5dcbf1f6a",
     "url": "/the-tv-database/static/css/main.dcd3d0a3.chunk.css"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/the-tv-database/static/css/2.8cb33725.chunk.css"
   },
   {
-    "revision": "62bcb76dbf6dae5c43456a4083e39206",
+    "revision": "92cad2f4f69ea18d0a79649b5d191f1b",
     "url": "/the-tv-database/index.html"
   }
 ];
