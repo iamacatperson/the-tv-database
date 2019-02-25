@@ -48,7 +48,7 @@ class Home extends Component {
         this.setState({
             isLoading: false,
             tvshows: tvshows.data,
-            totalMovies: 500
+            totalMovies: tvshows.data.total_pages
         });
 	}
 
