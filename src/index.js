@@ -4,13 +4,13 @@ import Routes from './routes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 const App = () => {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<Routes />
-		</BrowserRouter>
+		</HashRouter>
 	)
 }
 
