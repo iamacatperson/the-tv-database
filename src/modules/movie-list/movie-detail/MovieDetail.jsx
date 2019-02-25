@@ -197,7 +197,7 @@ class MovieDetail extends Component {
                                                 <div>
                                                     {tvDetail.videos.results.map(video => {
                                                         return (
-                                                            <div className="movie-detail__iframe-wrapper">
+                                                            <div className="movie-detail__iframe-wrapper" key={video.key}>
                                                                 <iframe key={video.key} src={`https://www.youtube.com/embed/${video.key}`}
                                                                     frameBorder='0'
                                                                     allow='autoplay; encrypted-media'
