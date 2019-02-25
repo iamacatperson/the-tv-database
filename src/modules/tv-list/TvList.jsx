@@ -44,7 +44,7 @@ class TvList extends Component {
                                 }
 
                                 return (
-                                    <div className="col-4 col-sm-4 col-md-3 col-lg-3" key={movie.id}>
+                                    <div className="col-6 col-sm-4 col-md-3 col-lg-3" key={movie.id}>
                                         <div className="movie-list__item" onClick={() => this.handleItemClick(movie.id)}>
                                             <div className="movie-list__image">{movie.poster_path ? <img src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.name} /> : <img src={`https://via.placeholder.com/500x735.png?text=${movie.name}`} alt={movie.name} />}</div>
                                                 {isFavourite && <span className="movie-list__favourited"></span>}
