@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router";
 
 import axios from "axios";
+import moment from "moment";
 import qs from "qs";
 
 import { TMDB_API_KEY } from "../../../config.js";
@@ -184,7 +185,7 @@ class MovieDetail extends Component {
 										<strong>Each episode lasts about</strong> {tvDetail.episode_run_time} mins.
 										<br />
 										<strong>Originally from</strong> {tvDetail.origin_country}<br />
-										<strong>First aired on</strong> {tvDetail.first_air_date}</p>
+										<strong>First aired on</strong> {moment(tvDetail.first_air_date).format("MMM Do YYYY")}</p>
 
 										<p>Average Rating<br />
 										<span className="movie-detail__rating">{tvDetail.vote_average} / 10</span></p>
