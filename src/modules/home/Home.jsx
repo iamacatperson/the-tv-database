@@ -4,9 +4,9 @@ import ReactPaginate from 'react-paginate';
 
 import { TMDB_API_KEY } from "../../config.js";
 
-import "../../styles.scss";
 import TvList from "../tv-list/TvList.jsx";
 
+import "../../styles.scss";
 import "./Home.scss";
 
 class Home extends Component {
@@ -38,8 +38,7 @@ class Home extends Component {
 	}
 
 	/**
-     * gets the movie list from the API endpoint
-     * @param {string} query		search query string
+     * gets the tv list from the API endpoint
      */
     async getMovies() {
     	const { pageNumber, sortBy, selectedGenre } = this.state;
@@ -55,7 +54,6 @@ class Home extends Component {
 
 	/**
      * gets the movie list from the API endpoint
-     * @param {string} query		search query string
      */
     async getGenres() {
 
@@ -67,8 +65,7 @@ class Home extends Component {
 	}
 
     /**
-     * gets the movie list from the API endpoint
-     * @param {string} query		search query string
+     * gets the search resultsu from the API endpoint
      */
     async search() {
 
@@ -91,8 +88,8 @@ class Home extends Component {
     }
 
     /**
-     * gets the movie seasons from the API endpoint
-     * @param {string} query		search query string
+     * handles search onChange event
+     * @param {string} event		event object
      */
     handleSearch(event) {
         this.setState({ searchQuery: event.target.value }, () => { 
@@ -124,7 +121,7 @@ class Home extends Component {
 	}
 
 	/**
-     * handles changing of sorting parameter
+     * handles changing of sort type
      * @param {object} event		event object
      */
     handleSortChange(event) {
@@ -136,7 +133,7 @@ class Home extends Component {
     }
 
     /**
-     * handles changing of sorting parameter
+     * handles changing of genre
      * @param {object} event		event object
      */
     handleGenreChange(event) {
