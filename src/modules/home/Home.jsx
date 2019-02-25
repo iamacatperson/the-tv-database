@@ -33,14 +33,14 @@ class Home extends Component {
 	}
 
 	componentDidMount() {
-		this.getMovies();
+		this.getTvShows();
 		this.getGenres();
 	}
 
 	/**
      * gets the tv list from the API endpoint
      */
-    async getMovies() {
+    async getTvShows() {
     	const { pageNumber, sortBy, selectedGenre } = this.state;
 
     	const tvshows = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${TMDB_API_KEY}&language=en-US&with_genres=${selectedGenre}&sort_by=${sortBy}&page=${pageNumber}`)
@@ -75,7 +75,7 @@ class Home extends Component {
     	if(searchQuery !== "") {
 	    	searchTv = await axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${TMDB_API_KEY}&language=en-US&query=${searchQuery}&page=${pageNumber}`);
     	} else {
-    		this.getMovies();
+    		this.getTvShows();
     	}
 
     	this.setState({
@@ -111,7 +111,7 @@ class Home extends Component {
 			pageNumber: pageNumber.selected + 1
 		}, () => {
 			if(searchQuery === "") {
-				this.getMovies();
+				this.getTvShows();
 			} else {
 				this.search();
 			}
@@ -126,7 +126,7 @@ class Home extends Component {
      */
     handleSortChange(event) {
         this.setState({ sortBy: event.target.value }, () => {
-            this.getMovies();
+            this.getTvShows();
         });
 
         this.resetSearch();
@@ -138,7 +138,7 @@ class Home extends Component {
      */
     handleGenreChange(event) {
         this.setState({ selectedGenre: event.target.value }, () => {
-            this.getMovies();
+            this.getTvShows();
         });
 
         this.resetSearch();
