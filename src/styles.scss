@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+	overflow-y: scroll;
+	background: #eaeeef;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+	padding: 0;
+	margin: 0 0 30px 0;
+}
+
+p {
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 30px;
+
+	@media only screen and (max-width: 600px) {
+		font-size: .9em;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+label,
+p,
+input,
+button {
+	font-family: "Open Sans", sans-serif;
+}
+
+button:focus, select, input { outline: none; }
+
+button {
+	transition: background 200ms ease-in;
+}
+
+button:hover {
+	background: #6ecabc;
+}
+
+a:active, a:focus, button:active, button:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+input {
+	border: 1px solid #fff;
+}
+
+select {
+    appearance: none;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    background: url(./images/icon_chevron.png) no-repeat #fff;
+    background-size: 40px 40px;
+    background-position: 100% 50%;
+
+   	@media only screen and (max-width: 600px) {
+		padding: 5px 10px;
+	}
+}
+
+iframe {
+	width: 100%;
+	margin-bottom: 20px;
+}
