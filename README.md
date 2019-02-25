@@ -21,12 +21,24 @@ hit enter. This will copy all the files from this repo down to your computer.
 
 * Type ```npm install``` to install all dependencies
 
+## Important: Before you start the app
+
+This app needs an API key to request data from [The Movie Database](https://www.themoviedb.org/).
+
+To do this:
+
+* Add a .env file in the root folder of the project (the-tv-database/.env) 
+* Copy-paste the credentials (to be provided by the developer)
+
+You may now start the app by typing ```npm start``` in your terminal.
+
 ## Functionality overview
 
 * Browse TV shows
 * See TV show details
 * Search / Sort TV shows
 * Favourite TV shows
+* Responsive
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
